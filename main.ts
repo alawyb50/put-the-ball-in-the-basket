@@ -1,9 +1,6 @@
 namespace SpriteKind {
     export const Hoop = SpriteKind.create()
 }
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Hoop, function (sprite, otherSprite) {
-    game.over(true)
-})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
 . . . . f f f f f f f . . . . . 
@@ -23,6 +20,9 @@ f 4 4 4 4 f 4 f f f f f 4 4 f .
 . . . . f f f f f f f . . . . . 
 . . . . . . . . . . . . . . . . 
 `, mySprite, 0, -100)
+})
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Hoop, function (sprite, otherSprite) {
+    game.over(true)
 })
 let projectile: Sprite = null
 let mySprite: Sprite = null
