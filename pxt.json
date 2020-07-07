@@ -1,5 +1,6 @@
 {
     "name": "put the ball in the basket by ali bukhamsin",
+    "version": "1.0.0",
     "description": "",
     "dependencies": {
         "device": "*"
